@@ -85,7 +85,7 @@ From the project root:
 
 ## 📬 REST API Usage (Sample)
 
-You can import the Postman collection (auto-generated from app):
+You can import the Postman collection [collection.json](https://github.com/nvminh/quiz-app/blob/main/docs/Quiz%20Service%20APIs.postman_collection.json)
 
 > **URL**: `http://localhost:8080`
 > **Alternative**: Use `curl` or `httpie`
