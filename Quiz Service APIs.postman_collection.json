@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "e158d288-5c38-4aa7-89c0-71147c4d1c4d",
+		"name": "Quiz Service APIs",
+		"description": "Collection to test quiz-service endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4792808"
+	},
+	"item": [
+		{
+			"name": "2. Get All Quizzes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/quizzes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"quizzes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Get Quiz By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/quizzes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"quizzes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get leaderboard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/quizzes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"quizzes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1. Create Quiz",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": null,\n  \"title\": \"Basic Math Quiz\",\n  \"startTime\": \"2025-06-11T01:01:01\",\n  \"endTime\": \"2025-06-12T01:01:01\",\n  \"questions\": [\n    {\n      \"id\": null,\n      \"quizId\": 0,\n      \"text\": \"What is 2+2?\",\n      \"answer\": \"4\",\n      \"score\": 10\n    },\n    {\n      \"id\": null,\n      \"quizId\": 0,\n      \"text\": \"What is 3*3?\",\n      \"answer\": \"9\",\n      \"score\": 10\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/quizzes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"quizzes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. Submit Quiz by user123",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": \"user123\",\n  \"quizId\": 1,\n  \"answers\": {\n    \"1\": \"4\",\n    \"2\": \"9\"\n  }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/quizzes/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"quizzes",
+						"submit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Submit Quiz by user456",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": \"user456\",\n  \"answers\": {\n    \"1\": \"4\",\n    \"2\": \"910\"\n  }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/quizzes/1/results",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"quizzes",
+						"1",
+						"results"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8. Submit Quiz by user456_2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": \"user456\",\n  \"answers\": {\n    \"1\": \"4\",\n    \"2\": \"910\"\n  }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/quizzes/1/results",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"quizzes",
+						"1",
+						"results"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Join Quiz user123",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": \"user123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/quizzes/1/join",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"quizzes",
+						"1",
+						"join"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Join Quiz user456",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": \"user123\",\n  \"quizId\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/quizzes/join",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"quizzes",
+						"join"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
