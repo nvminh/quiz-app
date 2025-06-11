@@ -138,35 +138,9 @@ Content-Type: application/json
 }
 ```
 
-Alternate endpoint (if used):
-
-```http
-POST /api/quizzes/join
-{
-  "userId": "user123",
-  "quizId": 1
-}
-```
-
 ---
 
 ### 📝 Submit Quiz Answers
-
-```http
-POST /api/quizzes/submit
-Content-Type: application/json
-
-{
-  "userId": "user123",
-  "quizId": 1,
-  "answers": {
-    "1": "4",
-    "2": "9"
-  }
-}
-```
-
-Alternate endpoint (optional):
 
 ```http
 POST /api/quizzes/1/results
