@@ -186,33 +186,3 @@ POST /api/quizzes/1/results
 ```http
 GET /api/leaderboard
 ```
-
----
-
-## 🔁 Kafka Integration
-
-* **Topic**: `quiz-scores`
-* **Producer**: Quiz Service publishes score results on submission
-* **Consumer**: Leaderboard Service listens to scores and updates rankings in memory
-
----
-
-## 🏗 Architecture
-
-```
-[ Client / Postman ]
-        |
-        V
-  [ Quiz Service ] -- Kafka --> [ Leaderboard Service ]
-```
-
----
-
-## 📚 License
-
-MIT © [nvminh](https://github.com/nvminh)
-
-```
-
-Would you like me to generate the actual `.postman_collection.json` file from the structure you've pasted for easier import into Postman?
-```
